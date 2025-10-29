@@ -1,29 +1,31 @@
-⚡️ SPRINT 2 — JavaScript & E-commerce
+⚡️ SPRINT 2: Part 2/2 - Create an E-commerce Application
 
-🧩 Descripción general:
+🧩 Overview:
+This project is an e-commerce web application developed to manage a shopping cart and apply product promotions.
 
-     Proyecto realizado como parte del Sprint 2, centrado en el aprendizaje y aplicación de JavaScript, DOM y Bootstrap,
-     a través de dos etapas:
+It focuses on implementing the shopping cart logic and applying promotions to the final price.
 
-     -Ejercicios básicos de JavaScript: práctica de los fundamentos del lenguaje.
-     -Aplicación web de E-commerce: desarrollo de un sitio que simula un carrito de compra con promociones y cálculos dinámicos.
-  
-🎯 Objetivos
+The application must simulate key online store functionalities, such as adding and removing products, calculating totals, and validating forms.
 
-     -Funciones de flecha
-     -Operador ternario
-     -Callbacks
-     -Operadores Rest y Spread
-     -Métodos de arrays (map, filter, forEach, etc.)
-     
-     -Desarrollar una aplicación de e-commerce con las siguientes funcionalidades:
-         -Añadir y eliminar productos.
-         -Calcular totales dinámicamente.
-         -Aplicar promociones sobre precios.
-         -Validar formularios.
-         -Mejorar la manipulación del DOM y la sincronización de datos en tiempo real.
+🔗 Project Repository:
+https://github.com/claudiabcn/sprint2-ecommerce
 
-💻 Tecnología utilizada
+
+🎯 Objetives:
+
+Develop an e-commerce application with the following features:
+
+- Add and remove products.
+
+- Calculate totals dynamically.
+
+- Apply promotions to prices.
+
+- Validate forms.
+
+I- mprove DOM manipulation and real-time data synchronization.
+
+💻  Technology Used:
         
       🧾 HTML5
       🎨 CSS3
@@ -31,38 +33,36 @@
       💠 Bootstrap
       🐙 GitHub
 
-📂 Carpetas del repositorio:
+📋 Files:
 
-      - 2.1-Level1-Excercises
-    
-     -  2.1-Level2-Excercises
-    
-      - 2.2-Ecommerce
+```
+sprint2-basicsJS/
+├── 📁 css
+├── 📁 images
+├── 📁 js
+│ ├── 📄 \_checkout.js
+│ ├── 📄 \_products.js
+│ ├── 📄 \_shop.js
+├── 📄 index.html
+├── 📄 checkout.html
+├── 📄 README.md
+```
 
-🔗 Repositorio principal:
-https://github.com/claudiabcn/sprint2-basicsJS
+🛠 Installation:
+Clone the Repository: git clone https://github.com/claudiabcn/sprint2-basicsJS
 
-🛠 Instalación
+📸 Demo:
+https://sprint2-ecommerce.vercel.app/
 
-    Para clonar el repositorio:
+⭐ Learnings and Challenges Encountered:
+During this sprint, I reinforced my knowledge of JavaScript and its practical application in web development.
 
-    git clone https://github.com/claudiabcn/sprint2-basicsJS
+Implementation of the shopping cart logic.
 
-📸 Demos:
-      
-    🔗 Ejercicios JS nivel 1: https://sprint2-ecommerce.vercel.app/
-      
-    🔗 Ejercicios JS nivel 2: https://level1-ex-claudiabcn.netlify.app/
-      
-    🛒 E-commerce App: https://level2-ex-claudiabcn.netlify.app/
+Data synchronization and real-time total updates.
 
-⭐ Aprendizajes y retos encontrados
+DOM and array manipulation to manage products and promotions.
 
-      Durante este sprint he reforzado mis conocimientos de JavaScript y su aplicación práctica en el desarrollo web.
-      Uso correcto de this en funciones flecha.
-      Diferencias entre map, forEach y filter.
-      Uso de promesas y async/await.
-      Implementación de la lógica del carrito de compra.
-      Sincronización de datos y actualización de totales en tiempo real.
-      Resolución de errores lógicos en funciones.
-      Manipulación del DOM y de arrays para gestionar productos y promociones.
+Among the challenges encountered, I can mention:
+
+When I implemented the promotions logic, the data synchronization (ensuring changes in the cart were reflected in the total calculations in real-time), and identifying and resolving errors in the function logic when the expected results weren't obtained. I have learned to interact with the DOM elements of the webpage and have become familiar with array manipulation.
