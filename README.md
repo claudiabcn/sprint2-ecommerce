@@ -1,17 +1,17 @@
-⚡️ SPRINT 2: Part 2/2 - Create an E-commerce Application
+# ⚡️ SPRINT 2: Part 2/2 - Create an E-commerce Application
 
-🧩 Overview:
+## 🧩 Overview:
 This project is an e-commerce web application developed to manage a shopping cart and apply product promotions.
 
 It focuses on implementing the shopping cart logic and applying promotions to the final price.
 
 The application must simulate key online store functionalities, such as adding and removing products, calculating totals, and validating forms.
 
-🔗 Project Repository:
+## 🔗 Project Repository:
 https://github.com/claudiabcn/sprint2-ecommerce
 
 
-🎯 Objetives:
+## 🎯 Objetives:
 
 Develop an e-commerce application with the following features:
 
@@ -23,9 +23,9 @@ Develop an e-commerce application with the following features:
 
 - Validate forms.
 
-I- mprove DOM manipulation and real-time data synchronization.
+- Improve DOM manipulation and real-time data synchronization.
 
-💻  Technology Used:
+## 💻  Technology Used:
         
       🧾 HTML5
       🎨 CSS3
@@ -33,7 +33,7 @@ I- mprove DOM manipulation and real-time data synchronization.
       💠 Bootstrap
       🐙 GitHub
 
-📋 Files:
+## 📋 Files:
 
 ```
 sprint2-basicsJS/
@@ -48,13 +48,13 @@ sprint2-basicsJS/
 ├── 📄 README.md
 ```
 
-🛠 Installation:
+## 🛠 Installation:
 Clone the Repository: git clone https://github.com/claudiabcn/sprint2-basicsJS
 
-📸 Demo:
+## 📸 Demo:
 https://sprint2-ecommerce.vercel.app/
 
-⭐ Learnings and Challenges Encountered:
+## ⭐ Learnings and Challenges Encountered:
 During this sprint, I reinforced my knowledge of JavaScript and its practical application in web development.
 
 Implementation of the shopping cart logic.
