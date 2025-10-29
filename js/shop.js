@@ -128,3 +128,4 @@ cartList.addEventListener('click', (event) => {
         removeFromCart(productId);
     }
 });
+
