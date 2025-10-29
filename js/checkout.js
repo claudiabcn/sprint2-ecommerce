@@ -68,11 +68,6 @@ const validate = () => {
     errorLastN.style.display = "block";
     isValid = false;
   }
-  if (addressValue === "" || addressValue.length < 3) {
-    fAdress.classList.add("is-invalid");
-    errorAddress.style.display = "block";
-    isValid = false;
-  }
   if (passwordValue === "" || passwordValue.length < 3 || !passwordRegex.test(passwordValue)) {
     fPassword.classList.add("is-invalid");
     errorPassword.style.display = "block";
