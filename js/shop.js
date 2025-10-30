@@ -1,10 +1,10 @@
 import { products } from "./products.js";
 
-const cart = [];
-const cartList = document.querySelector('#cart_list');
-const totalPrice = document.querySelector('#total_price');
-const promoPrice = document.querySelector('#promo_price');
-const countProductBadge = document.querySelector('#count_product');
+let cart = [];
+let cartList = document.querySelector('#cart_list');
+let totalPrice = document.querySelector('#total_price');
+let promoPrice = document.querySelector('#promo_price');
+let countProductBadge = document.querySelector('#count_product');
 
 const buy = (productId) => {
     const productInCart = cart.find((product) => product.id === productId);
@@ -14,7 +14,7 @@ const buy = (productId) => {
     } else {
         const productToAdd = products.find((product) => product.id === productId);
         if (productToAdd) {
-            const newProduct = { ...productToAdd, quantity: 1 };
+            let newProduct = { ...productToAdd, quantity: 1 };
             cart.push(newProduct);
         }
     }
