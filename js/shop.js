@@ -7,20 +7,29 @@ let promoPrice = document.querySelector('#promo_price');
 let countProductBadge = document.querySelector('#count_product');
 
 const buy = (productId) => {
+    if (!productId) {
+        return { success: false, message: "ID invalid" };
+    }
+    
     const productInCart = cart.find((product) => product.id === productId);
 
     if (productInCart) {
         productInCart.quantity++;
     } else {
         const productToAdd = products.find((product) => product.id === productId);
-        if (productToAdd) {
-            let newProduct = { ...productToAdd, quantity: 1 };
-            cart.push(newProduct);
+
+        if (!productToAdd) {
+            return { success: false, message: "Product not found" };
         }
+
+        let newProduct = { ...productToAdd, quantity: 1 };
+        cart.push(newProduct);
     }
-    
+
     printCart();
     updateProductCount();
+
+    return { success: true, message: "Product added successfully" };
 };
 
 const removeFromCart = (productId) => {
