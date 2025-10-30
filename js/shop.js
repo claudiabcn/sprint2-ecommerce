@@ -42,15 +42,13 @@ const removeFromCart = (productId) => {
     else {
     return { success: false, message: "Product not found in cart" };
     }
-    printCart();
-    updateProductCount();
+refreshCartView();
     return { success: true, message: "Product deleted successfully" };
 };
 
 const cleanCart = () => {
     cart.length = 0;
-    printCart();
-    updateProductCount();
+refreshCartView();
 };
 
 const calculateTotal = () => {
@@ -143,3 +141,7 @@ cartList.addEventListener('click', (event) => {
     }
 });
 
+const refreshCartView = () => {
+  printCart();
+  updateProductCount();
+};
