@@ -64,8 +64,6 @@ const calculateTotal = () => {
     return totalCart
 };
 
-
-
 const getDiscount = (product) => {
 let discount = 0;
 if (parseInt(product.id) === 1 && product.quantity >= 3) {  discount += product.price * product.quantity * 0.2 }
