@@ -51,13 +51,15 @@ const cleanCart = () => {
 refreshCartView();
 };
 
+const getProductSubtotal = (product) => product.price * product.quantity;
+
 const calculateTotal = () => {
     for (const product of cart) {
         if (!product.price || !product.quantity) {
             return { success: false, message: "Invalid product data" };
         }    }
         const totalCart = cart.reduce((acc, product) => 
-        acc + (product.price * product.quantity), 0
+        acc + (getProductSubtotal()), 0
     );
     return totalCart
 };
@@ -97,7 +99,7 @@ const printCart = () => {
         emptyCartMessage.style.display = 'none';
 
         const cartRowsHTML = cart.map(product => {
-            const productTotal = (product.price * product.quantity).toFixed(2);
+            const productTotal = (getProductSubtotal()).toFixed(2);
             return `
                 <tr>
                     <th scope="row">${product.name}</th>
