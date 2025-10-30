@@ -64,16 +64,20 @@ const calculateTotal = () => {
     return totalCart
 };
 
+
+
+const getDiscount = (product) => {
+let discount = 0;
+if (parseInt(product.id) === 1 && product.quantity >= 3) {  discount += product.price * product.quantity * 0.2 }
+if (parseInt(product.id) === 3 && product.quantity >= 10) {  discount += product.price * product.quantity * 0.3}
+return discount
+}
+
 const applyPromotionsCart = () => {
     const total = calculateTotal();
     let discount = 0;
         cart.forEach(product => {
-        if (parseInt(product.id) === 1 && product.quantity >= 3) {
-            discount += product.price * product.quantity * 0.2;
-        }
-        if (parseInt(product.id) === 3 && product.quantity >= 10) {
-            discount += product.price * product.quantity * 0.3;
-        }
+        discount += getDiscount(product);
     });
 
     return total - discount;
