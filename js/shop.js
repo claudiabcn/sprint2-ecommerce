@@ -10,9 +10,7 @@ const buy = (productId) => {
     if (!productId) {
         return { success: false, message: "ID invalid" };
     }
-    
-    const productInCart = cart.find((product) => product.id === productId);
-
+        const productInCart = cart.find((product) => product.id === productId);
     if (productInCart) {
         productInCart.quantity++;
     } else {
@@ -21,18 +19,18 @@ const buy = (productId) => {
         if (!productToAdd) {
             return { success: false, message: "Product not found" };
         }
-
         let newProduct = { ...productToAdd, quantity: 1 };
         cart.push(newProduct);
     }
-
     printCart();
     updateProductCount();
-
     return { success: true, message: "Product added successfully" };
 };
 
 const removeFromCart = (productId) => {
+    if (!productId) {
+        return { success: false, message: "ID invalid" };
+    }
     const productIndex = cart.findIndex(product => product.id === productId);
 
     if (productIndex !== -1) {
@@ -40,11 +38,13 @@ const removeFromCart = (productId) => {
             cart[productIndex].quantity--;
         } else {
             cart.splice(productIndex, 1);
-        }
+        }}
+    else {
+    return { success: false, message: "Product not found in cart" };
     }
-
     printCart();
     updateProductCount();
+    return { success: true, message: "Product deleted successfully" };
 };
 
 const cleanCart = () => {
@@ -54,15 +54,20 @@ const cleanCart = () => {
 };
 
 const calculateTotal = () => {
-
-    return cart.reduce((total, product) => total + (product.price * product.quantity), 0);
+    for (const product of cart) {
+        if (!product.price || !product.quantity) {
+            return { success: false, message: "Invalid product data" };
+        }    }
+        const totalCart = cart.reduce((acc, product) => 
+        acc + (product.price * product.quantity), 0
+    );
+    return totalCart
 };
 
 const applyPromotionsCart = () => {
     const total = calculateTotal();
     let discount = 0;
-    
-    cart.forEach(product => {
+        cart.forEach(product => {
         if (parseInt(product.id) === 1 && product.quantity >= 3) {
             discount += product.price * product.quantity * 0.2;
         }
